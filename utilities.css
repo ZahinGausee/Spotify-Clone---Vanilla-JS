@@ -1,0 +1,42 @@
+.flex {
+  display: flex;
+}
+
+.align-items {
+  align-items: center;
+}
+
+.justify-content {
+  justify-content: center;
+}
+
+.invert {
+  filter: invert(1);
+}
+
+.m-1 {
+  margin: 10px;
+}
+
+.p-1 {
+  padding: 10px;
+}
+
+.rounded {
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #333; /* Set the background color of the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555; /* Set the color of the scrollbar handle */
+  border-radius: 6px; /* Set the border radius of the handle */
+}
