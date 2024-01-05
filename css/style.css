@@ -20,13 +20,13 @@ body {
 
 .left {
   margin: 10px;
-  width: 35vw;
+  width: 30vw;
 }
 
 .right {
   position: relative;
   margin: 10px 10px 10px 0;
-  width: 75vw;
+  width: 70vw;
   background-color: #1e1e1e;
 }
 
@@ -155,6 +155,7 @@ header .buttons {
 
 .spotifyPlayList {
   padding: 10px 30px;
+  /* width: 100%; */
 }
 .spotifyPlayList h1 {
   font-size: 22px;
@@ -169,7 +170,7 @@ header .buttons {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  max-height: 70vh;
+  max-height: 60vh;
   overflow-y: auto;
 }
 .card > * {
@@ -207,7 +208,7 @@ header .buttons {
 }
 .play-button {
   position: absolute;
-  top: 182px;
+  top: 180px;
   right: 25px;
   opacity: 0;
   transition: all 0.5ms ease-out;
@@ -216,8 +217,7 @@ header .buttons {
 /* PlayBar */
 .playBar {
   width: 65vw;
-  min-height: 50px;
-  /* min-height: 37px; */
+  /* min-height: 50px; */
   padding: 12px 6px;
   position: fixed;
   bottom: 0px;
@@ -251,6 +251,12 @@ header .buttons {
 .time-volume {
   gap: 20px;
 }
+.range > img {
+  cursor: pointer;
+}
+.range #volume {
+  cursor: pointer;
+}
 #songButton {
   display: flex;
   /* justify-content: center; */
@@ -258,7 +264,7 @@ header .buttons {
 }
 #songButton img {
   cursor: pointer;
-  width: 34px;
+  width: 30px;
 }
 #songTime {
   font-size: 14px;
@@ -321,7 +327,7 @@ header .buttons {
 }
 
 /* Media Query */
-@media (max-width: 1300px) {
+@media (max-width: 1250px) {
   .container {
     padding: auto;
   }
@@ -350,7 +356,8 @@ header .buttons {
   .cardContainer {
     justify-content: center;
     padding: 10px;
-    min-height: 53vh;
+    min-height: 55vh;
+    /* max-height: 50vh; */
   }
   .card {
     width: 40vw;
@@ -360,6 +367,20 @@ header .buttons {
   }
   .card p {
     font-size: 20px;
+  }
+  .card:hover {
+    background-color: rgb(37, 37, 37);
+    .play-button {
+      opacity: 1;
+      top: 300px;
+    }
+  }
+  .play-button {
+    position: absolute;
+    top: 182px;
+    right: 25px;
+    opacity: 0;
+    transition: all 0.5ms ease-out;
   }
   .right {
     width: 100vw;
@@ -407,5 +428,15 @@ header .buttons {
 @media (max-width: 450px) {
   .card {
     width: 80vw;
+  }
+  .cardContainer {
+    max-height: 40vh;
+  }
+  .card:hover {
+    background-color: rgb(37, 37, 37);
+    .play-button {
+      opacity: 1;
+      top: 293px; 
+    }
   }
 }
