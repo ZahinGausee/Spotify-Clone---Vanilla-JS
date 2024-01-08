@@ -41,7 +41,7 @@ function toggleNavbar() {
 function playSongs(track, pause = false) {
   let songString = `/${currentFolder}/${track}`;
   if (!songString.endsWith(".mp3")) {
-    songString = `/${currentFolder}/${track}_PagalWorld.com.pe_.mp3`;
+    songString = `/${currentFolder}/${track}(PagalWorld.com.pe).mp3`;
   }
   currentSong.src = songString;
   if (!pause) {
@@ -57,7 +57,7 @@ function playSongs(track, pause = false) {
 async function getSongs(folder) {
     currentFolder = folder;
     // Remember the Url, make it correct to prevents from errors
-    let a = await fetch(`/${folder}/`);
+    let a = await fetch(`/${folder}`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -92,7 +92,7 @@ async function getSongs(folder) {
   Array.from(listItems).forEach((e) => {
     e.addEventListener("click", () => {
       let songStr =
-        e.querySelector(".songName").innerHTML + "_PagalWorld.com.pe_.mp3"
+        e.querySelector(".songName").innerHTML + "(PagalWorld.com.pe).mp3"
       playSongs(songStr);
     });
   });
