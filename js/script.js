@@ -57,7 +57,7 @@ function playSongs(track, pause = false) {
 async function getSongs(folder) {
     currentFolder = folder;
     // Remember the Url, make it correct to prevents from errors
-    let a = await fetch(`/${folder}`);
+    let a = await fetch(`/${folder}/`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -75,7 +75,7 @@ async function getSongs(folder) {
   let songUl = document.querySelector(".songList");
   songUl.innerHTML = "";
   for (const song of songs) {
-    let strsong = song.replaceAll("%20", " ").replaceAll("_PagalWorld.com.pe_.mp3", "")
+    let strsong = song.replaceAll("%20", " ").replaceAll("(PagalWorld.com.pe).mp3", "")
     songUl.innerHTML =
       songUl.innerHTML +
       `<li> 
