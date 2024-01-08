@@ -1,6 +1,8 @@
 # Spotify Clone - Vanilla JS
 
-This project is a Spotify clone built with vanilla JavaScript, HTML, and CSS. It serves as a practice ground for web development skills, focusing on the implementation of core features found in the Spotify music streaming platform.
+This project is a Spotify clone built with vanilla JavaScript, HTML, and CSS. It serves as a practice ground for web development skills, focusing on the implementation of core features found in the Spotify music streaming platform. You can see it live Here: 
+
+   https://gauseezahin.freewebhostmost.com/
 
 ## Key Features
 
